@@ -1,1 +1,3 @@
-
+# Assigns string to variable, then prints string with the variable
+my_name = "Charles"
+print("Hello and welcome " + my_name + "!")
