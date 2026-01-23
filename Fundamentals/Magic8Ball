@@ -1,0 +1,46 @@
+import random
+
+# Assigns variables, leaves an empty variable for answer later
+name = "Charles"
+question = "Will I find a quarter on the ground today?"
+answer = ""
+
+# Defines random_number to be anything between 1-9
+random_number = random.randint(1,9)
+
+# testing random number generation. Uncomment to test
+# print(random_number)
+
+# if statements to check random_number and assign a string to answer
+if random_number == 1:
+  answer = "Yes - definitely"
+elif random_number == 2:
+  answer = "It is decidely so"
+elif random_number == 3:
+  answer = "Without a doubt"
+elif random_number == 4:
+  answer = "Reply hazy, try again"
+elif random_number == 5:
+  answer = "Ask again later"
+elif random_number == 6:
+  answer = "Better not tell you now"
+elif random_number == 7:
+  answer = "My sources say no"
+elif random_number == 8:
+  answer = "Outlook not so good"
+elif random_number == 9:
+  answer = "Very doubtful"
+else:
+  answer = "Error"
+
+# Generates different statement if the user has entered a name or not and provides different output depending.
+if not name:
+  print("Question:", question)
+else:
+  print(name, "asks:", question)
+
+# Checks if user entered a question or not. If no question is entered, the program tells them to enter a question first. If question is asked, provides answer based on previous if/elseif statements
+if not question:
+  print("Please ask the Magic-8 Ball a question")
+else:
+  print("Magic 8-Ball's answer:", answer)
