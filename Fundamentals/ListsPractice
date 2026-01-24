@@ -1,0 +1,39 @@
+# This code is an example project to work with lists and practice manipulating them
+# List provided by example project
+inventory = ["twin bed", "twin bed", "headboard", "queen bed", "king bed", "dresser", "dresser", "table", "table", "nightstand", "nightstand", "king bed", "king bed", "twin bed", "twin bed", "sheets", "sheets", "pillow", "pillow"]
+
+# Find length of list
+inventory_len = len(inventory)
+print(inventory_len)
+
+# Print the first item from the list
+first = inventory[0]
+print(first)
+
+# Print the last item from the list
+last = inventory[-1]
+print(last)
+
+# Print the list starting at index 2 and up to but not including index 6
+inventory_2_6 = inventory[2:6]
+print(inventory_2_6)
+
+# Print the first 3 items in the list
+first_3 = inventory[:3]
+print(first_3)
+
+# Count the number of times "twin bed" appears in the list
+twin_beds = inventory.count("twin bed")
+print(twin_beds)
+
+# Remove the 5th item from the list
+removed_5th_item = inventory.pop(4)
+print(removed_5th_item)
+
+# Add a new item in the 11th index slot
+inventory.insert(10, "19th Century Bed Frame")
+print(inventory)
+
+# Sort the list alphabetically
+inventory = sorted(inventory)
+print(inventory)
