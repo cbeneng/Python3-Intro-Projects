@@ -1,0 +1,49 @@
+# Sample project for Hair Salon Business. This project is practice to work with lists in a real setting.
+
+# Given data and variables, hairstyles, prices, last_week
+hairstyles = ["bouffant", "pixie", "dreadlocks", "crew", "bowl", "bob", "mohawk", "flattop"]
+
+prices = [30, 25, 40, 20, 20, 35, 50, 35]
+
+last_week = [2, 3, 5, 8, 4, 4, 6, 2]
+
+# Set my own variables that I will use throughout the project
+total_price = 0
+new_total_price = 0
+number_of_haircuts = len(hairstyles)
+total_revenue = 0
+
+# Use for-loop to get total price of all haircuts, and then average it
+for price in prices:
+  total_price += price
+print("Total Price of All Haircuts: $" + str(total_price)  )
+average_price = total_price / number_of_haircuts
+print("Average Price of All Haircuts: $" + str(average_price))
+
+# Hair Salon owner wants to reduce cost of all haircuts by $5. Use list comprehension to subtract 5 from all values in list prices
+new_prices = [new_price - 5 for new_price in prices]
+print("List of new prices after $5 off: " + str(new_prices))
+
+# Use for-loop to get total price of all haircuts after the $5 discount, and then average it
+for price in new_prices:
+  new_total_price += price
+print("New Total Price of All Haircuts: $" + str(new_total_price)  )
+new_average_price = new_total_price / number_of_haircuts
+print("New Average Price of All Haircuts: $" + str(new_average_price))
+
+#########################
+# Revenue
+# Use for-loop to calculate revenue of last_week
+for i in range(number_of_haircuts):
+  total_revenue += last_week[i] * prices[i]
+print("Last week's revenue: $" + str(total_revenue))
+
+# Average out the revenue over past 7 days
+average_daily_revenue = total_revenue / 7
+print("Average daily revenue: $" + str(average_daily_revenue))
+
+##########################
+# List Comprehension for Hair Salon owner to advertise all haircuts under $30
+
+cuts_under_30 = [hairstyles[cheap] for cheap in range(number_of_haircuts) if new_prices[cheap] < 30]
+print(cuts_under_30)
