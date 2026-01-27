@@ -1,0 +1,14 @@
+# Given data
+sales_data = [[12, 17, 22], [2, 10, 3], [5, 12, 13]]
+
+# Set initial values for variables
+scoops_sold = 0
+store_number = 1
+
+# Nested for loop to deal with the list within a list. Outputs the values for each store sales and then totals all the stores sales
+for location in sales_data:
+  print("Store Number " + str(store_number) + ": " + str(location))
+  store_number += 1
+  for total in location:
+    scoops_sold += total
+print("Total Sales: " + str(scoops_sold))
