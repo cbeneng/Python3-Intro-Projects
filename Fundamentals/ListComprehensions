@@ -1,0 +1,37 @@
+grades = [90, 88, 62, 76, 74, 89, 48, 57]
+scaled_grades = []
+
+# Verbose list comprehension:
+for grade in grades:
+  scaled_grades.append(grade + 10)
+print(scaled_grades)
+
+# One-Line list comprehension
+scaled_grades = [grade + 10 for grade in grades]
+print(scaled_grades)
+
+##############################################
+
+heights = [161, 164, 156, 144, 158, 170, 163, 163, 157]
+
+can_ride_coaster = [minimum for minimum in heights if minimum > 161]
+print(can_ride_coaster)
+
+##############################################
+
+# Define variables and range. Create variable single_digits which contains numbers 0 through 9 inclusive
+single_digits = range(10)
+squares = []
+
+# Print list of range 0 through 9 inclusive
+print(list(single_digits))
+
+# Use for-loop to square each value in single_digits. Saves it to a new list called squares
+for value in single_digits:
+  squares.append(value ** 2)
+
+print(squares)
+
+# Use list comprehension to cube each value in single_digits. Saves it to a new list called cubes
+cubes = [value ** 3 for value in single_digits]
+print(cubes)
